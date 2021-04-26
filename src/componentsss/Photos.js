@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import Photo from "./Photo";
-import {setFilterText} from "../redux/actions";
+import {setFilterText} from "../reduxxx/actions";
 
 function Photos(props) {
     const photos = useSelector(state => state.photos);

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch} from "react-redux";
-import {selectAlbum} from "../redux/actions";
+import {selectAlbum} from "../reduxxx/actions";
 
 function Album(props) {
     const dispatch = useDispatch();

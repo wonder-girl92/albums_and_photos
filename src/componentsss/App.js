@@ -2,7 +2,7 @@ import Albums from './Albums';
 import Photos from './Photos';
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {loadAlbums, loadPhotos} from "../redux/actions";
+import {loadAlbums, loadPhotos} from "../reduxxx/actions";
 
 function App() {
     const dispatch = useDispatch();

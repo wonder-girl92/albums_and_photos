@@ -33,7 +33,7 @@ ol {
 }
 
 .albums ol li:hover, .photos ul li:hover {
-    background-color: lightgrey;
+    background-color: lightcyan;
 }
 
 .album-title {

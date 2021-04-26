@@ -1,13 +1,84 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body {
+    font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.albums {
+    width: 400px;
+}
+
+.photos {
+    width: 400px;
+}
+
+.photos li .just-photo img {
+    width: 50px;
+    display: block;
+}
+
+.albums ol, .photos ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.albums ol li:hover, .photos ul li:hover {
+    background-color: lightgrey;
+}
+
+.album-title {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.photo-title {
+    width: 300px;
+}
+
+.photos ul li {
+    cursor: text;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+.albums ol li {
+    padding: 10px;
+    margin: 0;
+    border-bottom: 2px solid darkgrey;
+    cursor: pointer;
+}
+
+.no-album-selected {
+    width: 400px;
+    margin-left: 80px;
+    font-size: 26px;
+    font-weight: 900;
+    color: red;
+    align-self: center;
+    text-align: right;
+    flex: 1;
+}
+
+.filter {
+    margin-bottom: 15px;
+}
+
+.filter input {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
 }

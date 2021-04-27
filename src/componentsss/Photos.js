@@ -25,12 +25,12 @@ function Photos(props) {
     if (selectedAlbumId === null) {
         return (
             <div className="no-album-selected">
-              ⬅ВЫБЕРИТЕ НУЖНЫЙ АЛЬБОМ
+                ⬅ВЫБЕРИТЕ НУЖНЫЙ АЛЬБОМ
             </div>
         )
     }
 
-     return (
+    return (
         <div className="photos">
             <div className="filter">
                 <input type="text"

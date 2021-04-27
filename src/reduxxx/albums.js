@@ -2,7 +2,7 @@ const initialState = {
     selectedAlbumId: null,
     albums: [],
     loading: false,
-   }
+}
 
 export default (state = initialState, action) => {
     switch (action.type) {
@@ -25,7 +25,7 @@ export default (state = initialState, action) => {
                 selectedAlbumId: action.payload
             }
 
-           default:
+        default:
             return state;
     }
 }

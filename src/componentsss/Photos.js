@@ -4,12 +4,12 @@ import Photo from "./Photo";
 import {setFilterText} from "../reduxxx/actions";
 
 function Photos(props) {
-    const photos = useSelector(state => state.photos);
-    const selectedAlbumId = useSelector(state => state.selectedAlbumId)
+    const photos = useSelector(state => state.photos.photos);
+    const selectedAlbumId = useSelector(state => state.albums.selectedAlbumId)
 
     const dispatch = useDispatch();
 
-    const filter = useSelector(state => state.filter)
+    const filter = useSelector(state => state.photos.filter)
 
     const filteredPhotos = photos
         .filter(photo => {
@@ -25,12 +25,12 @@ function Photos(props) {
     if (selectedAlbumId === null) {
         return (
             <div className="no-album-selected">
-                ⬅ВЫБЕРИТЕ НУЖНЫЙ АЛЬБОМ
+              ⬅ВЫБЕРИТЕ НУЖНЫЙ АЛЬБОМ
             </div>
         )
     }
 
-    return (
+     return (
         <div className="photos">
             <div className="filter">
                 <input type="text"

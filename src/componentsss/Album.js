@@ -1,5 +1,5 @@
 import React from 'react';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {selectAlbum} from "../reduxxx/actions";
 
 function Album(props) {
@@ -9,8 +9,11 @@ function Album(props) {
         dispatch(selectAlbum(props.album.id))
     }
 
+    const selected = useSelector(state => state.albums.selectedAlbumId)
+
     return (
-        <li onClick={handleSelectAlbum}>
+        <li onClick={handleSelectAlbum}
+            className={selected === props.album.id ? "selected" : ''}>
             <div className="album-title">
                 {props.album.title}
             </div>
@@ -18,4 +21,4 @@ function Album(props) {
     )
 }
 
-export default Album;
+export default Album

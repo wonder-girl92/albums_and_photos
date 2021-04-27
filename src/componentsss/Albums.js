@@ -4,8 +4,7 @@ import {useSelector} from "react-redux";
 
 
 function Albums(props) {
-    const albums = useSelector(state => state.albums);
-
+    const albums = useSelector(state => state.albums.albums);
 
     return (
         <div className="albums">

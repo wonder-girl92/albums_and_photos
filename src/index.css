@@ -82,3 +82,7 @@ ol {
     padding: 10px;
     text-align: center;
 }
+
+.selected {
+    background-color: red;
+}

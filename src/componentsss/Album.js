@@ -1,22 +1,14 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {selectAlbum} from "../reduxxx/actions";
+import {Link} from "react-router-dom";
 
 function Album(props) {
-    const dispatch = useDispatch();
-
-    const handleSelectAlbum = () => {
-        dispatch(selectAlbum(props.album.id))
-    }
-
-    const selected = useSelector(state => state.albums.selectedAlbumId)
-
-    return (
-        <li onClick={handleSelectAlbum}
-            className={selected === props.album.id ? "selected" : ''}>
+       return (
+        <li>
+            <Link to={`/${props.album.id}`}>
             <div className="album-title">
                 {props.album.title}
             </div>
+            </Link>
         </li>
     )
 }

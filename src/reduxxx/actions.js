@@ -28,13 +28,6 @@ export const loadPhotos = () => {
     }
 }
 
-export const selectAlbum = (albumId) => {
-    return {
-        type: 'albums/select',
-        payload: albumId
-    }
-}
-
 export const setFilterText = (text) => {
     return {
         type: 'filter/set',

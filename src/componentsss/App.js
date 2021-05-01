@@ -3,6 +3,7 @@ import Photos from './Photos';
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {loadAlbums, loadPhotos} from "../reduxxx/actions";
+import {Route} from "react-router-dom"
 
 function App() {
     const dispatch = useDispatch();
@@ -26,8 +27,11 @@ function App() {
 
     return (
         <div className="container">
-            <Albums/>
-            <Photos/>
+            <Albums />
+            <Route path="/:id?">
+                <Photos />
+            </Route>
+
         </div>
     );
 }
